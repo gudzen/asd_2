@@ -11,7 +11,7 @@ int main()
 	line <char> s("line", 4);
 	line <char> s1("ege", 3);
 	s1 = s + s1;
-	cout << "Sum: " << s << endl;
+	cout << "Sum: " << s1 << endl;
 	s = s * 2;
 	cout << "Mull: " << s << endl;
 	s = s(1, 2);
@@ -23,6 +23,8 @@ int main()
 	i = i1 * 2;
 	cout << "Mull: " << i << endl;
 	i = i1(1, 3);
+	cout << "Sub: " << i << endl;
+	i = i1(1);
 	cout << "Sub: " << i << endl;
 	line <bool> b(l, 4);
 	cout << b << endl;

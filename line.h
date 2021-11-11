@@ -22,6 +22,7 @@ public:
 	line operator* (const size_t power);
 	line substring(const size_t index, const size_t length)const;
 	line operator() (const size_t start, const size_t stop) const;
+	line operator() (const size_t start) const;
 };
 
 template <typename T>

@@ -141,6 +141,7 @@ line<T> line<T>::substring(const size_t index, const size_t length)const
 	res._data[length] = 0;
 	return res;
 }
+
 template <typename T>
 line<T> line<T>::operator() (const size_t start, const size_t stop) const 
 {
@@ -154,6 +155,17 @@ line<T> line<T>::operator() (const size_t start, const size_t stop) const
 		throw"Conflict index\n";
 	return substring(start, stop - start + 1);
 }
+
+template <typename T>
+line<T> line<T>::operator() (const size_t start) const
+{
+	if (!_size)
+		return *this;
+	if (start >= _size)
+		throw"Invalid index(start)\n";
+	return substring(start, _size - start);
+}
+
 
 template <typename T>
 std::ostream& operator<<(std::ostream& out, const line<T>& s)

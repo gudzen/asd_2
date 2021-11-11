@@ -141,6 +141,7 @@ line<T> line<T>::substring(const size_t index, const size_t length)const
 	res._data[length] = 0;
 	return res;
 }
+
 template <typename T>
 line<T> line<T>::operator() (const size_t start, const size_t stop) const 
 {

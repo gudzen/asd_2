@@ -135,7 +135,7 @@ line<T> line<T>::substring(const size_t index, const size_t length)const
 	if (length <= 0)
 		throw"Invalid length\n";
 	line res(length);
-	for (int i = 0; i < length + 1; i++)
+	for (size_t i = 0; i < length + 1; i++)
 		if (_data)
 			res._data[i] = _data[index + i];
 	res._data[length] = 0;
